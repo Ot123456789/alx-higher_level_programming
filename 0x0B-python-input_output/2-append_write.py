@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""defining write_file with two arguments"""
+"""defining append_write function"""
 
 
-def write_file(filename="", text=""):
-    """reads filename with utf-8"""
+def append_write(filename="", text=""):
+    """appends filename with utf-8"""
     with open(filename, "a", encoding='utf-8') as f:
         return f.write(text)
