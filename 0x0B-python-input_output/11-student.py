@@ -28,7 +28,7 @@ class Student:
                 my_dict[key] = value
         return my_dict
 
-    def reload_from json(self, json):
+    def reload_from_json(self, json):
         '''this function replaces all attributes of the Student instance
         with the ones in the json argument
         '''
