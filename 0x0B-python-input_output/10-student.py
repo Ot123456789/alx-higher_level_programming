@@ -21,7 +21,7 @@ class Student:
                 if type(attr) is not str:
                     return self.__dict__
         except Exception:
-            return self.__dict__        
+            return self.__dict__
         my_dict = dict()
         for key, value in self.__dict__.items():
             if key in attrs:
