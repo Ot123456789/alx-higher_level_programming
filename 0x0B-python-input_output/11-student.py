@@ -21,17 +21,17 @@ class Student:
                 if type(attr) is not str:
                     return self.__dict__
         except Exception:
-            return self.__dict__ 
+            return self.__dict__
         my_dict = dict()
         for key, value in self.__dict__.items():
             if key in attrs:
                 my_dict[key] = value
         return my_dict
 
-    def reload_from_json(self, json):
-    '''this function replaces all attributes of the student instance
-    with the ones in the json argument
-    '''
-    for key, value in json.items():
-        if hasattr(self, key):
-            setattr(self, key, value)
+    def reload_from json(self, json):
+        '''this function replaces all attributes of the Student instance
+        with the ones in the json argument
+        '''
+        for key, value in json.items():
+            if key in self.__dict__:
+                self.__dict__[key] = value
