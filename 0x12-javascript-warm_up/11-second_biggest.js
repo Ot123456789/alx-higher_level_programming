@@ -1,13 +1,9 @@
 #!/usr/bin/node
-
-const numsArray = process.argv.slice(2);
-function secondMax (array) {
-  if (array.length < 2) {
-    return 0;
-  } else {
-    array.sort((x, y) => x - y);
-    array.pop();
-    return array.pop();
-  }
+if (process.argv.length <= 3) {
+  console.log(0);
+} else {
+  const args = process.argv.map(Number)
+    .slice(2, process.argv.length)
+    .sort((a, b) => a - b);
+  console.log(args[args.length - 2]);
 }
-console.log(secondMax(numsArray));
